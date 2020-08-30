@@ -4,6 +4,7 @@ FROM employee
 WHERE ssn = 20766;
 
 
+
 -- List the surnames and ssn's of the employees born before 1980
 SELECT lname, ssn
 FROM employee
