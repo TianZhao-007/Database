@@ -23,7 +23,7 @@
       目的： 把逻辑层次转换成具体的数据管理系统（DBMS）  
       举例： 假设逻辑数据是关系数据模型，在DBMS中建立关系的步骤：选择存储关系的文件； 决定用什么索引来加速访问； 描述完整性约束（integrity constraints）和安全措施
       影响： 这一步的设计会影响数据库的性能和访问能力。  
-       ![image](http://github.com/TianZhao-007/Database/master/note_picture/database_design.png)
+       ![image](http://github.com/TianZhao-007/Database/raw/master/note_picture/database_design.png)
       
   
   
