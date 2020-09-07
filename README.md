@@ -67,13 +67,13 @@
    #### Constraints on relationships  
         (*对二元关系类型而言）  
         **cardinality ratios**: 描述实体可以参与的关系 的最大值  
-        ![ ](https://github.com/TianZhao-007/Database/blob/master/note_picture/participation%20radios.png)          
+        ![cardinality_ratios](https://github.com/TianZhao-007/Database/blob/master/note_picture/participation%20radios.png)          
         **Participation constraints**: (total,partial)  
         员工 work-for 公司  
-        ![ ](https://github.com/TianZhao-007/Database/blob/master/note_picture/relationship_constraints.png)  
+        ![Participation_constraints](https://github.com/TianZhao-007/Database/blob/master/note_picture/relationship_constraints.png)  
         Total: 例子，一个员工必须为一个公司工作，但每个公司可能有人可能没人  
         Partial：例子，一个员工可能工作也可能不工作，每个公司可能有人可能没人  
-        ![  ](https://github.com/TianZhao-007/Database/blob/master/note_picture/participation_limits.png)  
+        ![limits](https://github.com/TianZhao-007/Database/blob/master/note_picture/participation_limits.png)  
         
    
         
