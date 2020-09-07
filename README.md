@@ -5,7 +5,8 @@
 ## 2.Relational Data Model and SQL
 
 ## 3.Entity-Relationship Model
-### 3.1 Database design
+### 3.1 Database design  
+  ![DB deign](https://github.com/TianZhao-007/Database/blob/master/note_picture/database_design.png)
   #### There are four steps to design database:  
   ###### step 1 : requirements collection and analysis  
      目的： 收集和分析数据需求，以满足商业组织的需要  
@@ -22,9 +23,9 @@
   ###### step 4 : physical design  
       目的： 把逻辑层次转换成具体的数据管理系统（DBMS）  
       举例： 假设逻辑数据是关系数据模型，在DBMS中建立关系的步骤：选择存储关系的文件； 决定用什么索引来加速访问； 描述完整性约束（integrity constraints）和安全措施
-      影响： 这一步的设计会影响数据库的性能和访问能力。  
-       ![design DB](note_picture/database_design.png)
+      影响： 这一步的设计会影响数据库的性能和访问能力。   
       
+              
   
   
 
