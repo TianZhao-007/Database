@@ -63,7 +63,17 @@
         superkeys, candidate key, primary key  
         最小数目的superkeys就是candidate key（实体类型）
         对ER模型来说，可能存在多个candidate keys（实体类型）  
-        关系类型的primary key是参与关系类型的实体类型的主键的组合
+        关系类型的primary key是参与到关系的实体类型的主键的组合  
+   #### Constraints on relationships  
+        (*对二元关系类型而言）  
+        **cardinality ratios**: 描述实体可以参与的关系 的最大值  
+        ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/participation%20radios.png)          
+        **Participation constraints**: (total,partial)  
+        员工 work-for 公司  
+        ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/relationship_constraints.png)  
+        Total: 例子，一个员工必须为一个公司工作，但每个公司可能有人可能没人  
+        Partial：例子，一个员工可能工作也可能不工作，每个公司可能有人可能没人  
+        ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/participation_limits.png)  
         
    
         
