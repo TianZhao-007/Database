@@ -38,12 +38,16 @@
       参与约束描述（participation/cardinality constraint）关系类型  
       （3）**数据操控**  
       没有标准的data manipulation和ER 数据模型相关  
-   ![compare](https://github.com/TianZhao-007/Database/blob/master/note_picture/compare.png)  
+   ![compare](https://github.com/TianZhao-007/Database/blob/master/note_picture/compare.jpg)  
    #### ER diagrams
       目的： 描述ER数据模型  
       记号：   
-      attributes:用椭圆（ovals）表示；  key attributes: 用下划线表示；  
-      entity types：用矩形框表示；  relationship types：用菱形（diamond）表示；
+      attributes:用椭圆（ovals）表示；    
+      key attributes: 用下划线表示；  
+      entity types：用矩形框表示；  
+      relationship types：用菱形（diamond）表示；  
+      weak entity sets:The double diamonds represent the relationship sets linked to weak entity sets.   
+      
       概念：  
       Entities：独立存在的事物，实体  
       relationships： 实体之间的关系  
@@ -68,14 +72,23 @@
         (*对二元关系类型而言）  
         **cardinality ratios**: 描述实体可以参与的关系 的最大值  
    ![cardinality_ratios](https://github.com/TianZhao-007/Database/blob/master/note_picture/participation%20radios.png)          
+   
         **Participation constraints**: (total,partial)  
         员工 work-for 公司  
    ![Participation_constraints](https://github.com/TianZhao-007/Database/blob/master/note_picture/relationship_constraints.png)  
         Total: 例子，一个员工必须为一个公司工作，但每个公司可能有人可能没人  
         Partial：例子，一个员工可能工作也可能不工作，每个公司可能有人可能没人  
-   ![limit](https://github.com/TianZhao-007/Database/blob/master/note_picture/participation_limits.png)  
         
-   
+        **cardinality limits**  (min,max) 限制关系的个数
+   ![limit](https://github.com/TianZhao-007/Database/blob/master/note_picture/participation_limits.png)  
+    
+   #### weak enitity types   
+        弱关系实体类型(双菱形表示）     
+        Def： Weak entity sets are the sets that do not have a primary key.    
+        Its exitence depends on the existence of an identifying entity type（识别关系）  
+        It must have one or more attributes,together with the primary key of the identifying entity type   
+        so that this weak entity tpye can be distinguished.   
+        
         
        
       
