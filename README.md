@@ -18,7 +18,7 @@
   ###### step 3 : Logical design  
       目的： 建立逻辑数据模型（e.g relational or object-oriented）  
       内容： 从概念层到逻辑层， 还可以进一步提炼（e.g. Normalisation:规范（BCNF,3NF,etc））  
-      举例： **From**  ER model **to** relations with their primary and foreign keys,满足SQL的增删查改等
+      举例： From  ER model to relations with their primary and foreign keys,满足SQL的增删查改等
       （* in this blog, the logical design is  based on the relational model）  
   ###### step 4 : physical design  
       目的： 把逻辑层次转换成具体的数据管理系统（DBMS）  
@@ -102,16 +102,20 @@
         (3) This type of relationship between subclass and superclass is often called ISA relationship type.  
    #### specialisation/generalisation(具体化/一般化)  
         (1) Specialisation is the process of defining a set of subclass of entity type.(top-down)    
-   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/specialasition.png)  
+   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/specialasition.png)     
+   
         (2) Generalisation is the inverse process of specialisation
    ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/generalisation.png)   
+   
    #### constraints on specialisation and generalisation  
         (1) Disjointness constraints  
         不相交约束：子类的具体化必须不相交（disjoint）  
         如果没有这个约束，那么子类的实体可能会重合（overlap）  
+        
         (2) Completeness constraints  
         Total:Every entity in the superclass must be a member of at least one subcalss  
    ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/disjointness.png)    
+   
         Partial: an entity may not belong to any of the subclasses.   
    ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/completeness.png)  
    #### summary of notations  
