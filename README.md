@@ -31,12 +31,12 @@
       In 1976, Peter Chen came up with this idea.  
       Later,ER model became the most popular data model used in conceptual database design.  
    #### 通常，ER数据模型主要有三个方面：  
-      （1） **数据结构**：   
+      （1） 数据结构：   
       在ER模型中，数据被描述成实体（entity）和带属性（attributes）的关系（relationship)  
-      （2） **数据完整性**：   
+      （2） 数据完整性：   
       在ER模型中，键（keys）来描述实体/关系类型；   
       参与约束描述（participation/cardinality constraint）关系类型  
-      （3）**数据操控**  
+      （3）数据操控  
       没有标准的data manipulation和ER 数据模型相关  
    ![compare](https://github.com/TianZhao-007/Database/blob/master/note_picture/compare.jpg)  
    #### ER diagrams
@@ -70,16 +70,16 @@
         关系类型的primary key是参与到关系的实体类型的主键的组合  
    #### Constraints on relationships  
         (*对二元关系类型而言）  
-        **cardinality ratios**: 描述实体可以参与的关系 的最大值  
+   **cardinality ratios**: 描述实体可以参与的关系 的最大值  
    ![cardinality_ratios](https://github.com/TianZhao-007/Database/blob/master/note_picture/participation%20radios.png)          
    
-        **Participation constraints**: (total,partial)  
+   **Participation constraints**: (total,partial)  
         员工 work-for 公司  
    ![Participation_constraints](https://github.com/TianZhao-007/Database/blob/master/note_picture/relationship_constraints.png)  
         Total: 例子，一个员工必须为一个公司工作，但每个公司可能有人可能没人  
         Partial：例子，一个员工可能工作也可能不工作，每个公司可能有人可能没人  
         
-        **cardinality limits**  (min,max) 限制关系的个数
+   **cardinality limits**  (min,max) 限制关系的个数
    ![limit](https://github.com/TianZhao-007/Database/blob/master/note_picture/participation_limits.png)  
     
    #### weak enitity types   
