@@ -88,8 +88,34 @@
         Its exitence depends on the existence of an identifying entity type（识别关系）  
         It must have one or more attributes,together with the primary key of the identifying entity type   
         so that this weak entity tpye can be distinguished.   
-        
-        
+   ![weak_entity](https://github.com/TianZhao-007/Database/blob/master/note_picture/weak_entity.png)  
+  ### Enhanced Entity-relationship(EER) model  
+        基本定义：增强型实体关系模型包含ER模型的所有性质  
+        特点：  
+        subclass/superclass  
+        specialisation/generalisation  
+        constraints on specialisation/generalisation  
+   #### subclass/superclass（子类/父类）  
+        Def：subgrouping of entities is subclass    
+        (1) Subclass inherits attributes and relationships of superclass.  
+        (2) Subclass can have additional attributes and realationships.  
+        (3) This type of relationship between subclass and superclass is often called ISA relationship type.  
+   #### specialisation/generalisation(具体化/一般化)  
+        (1) Specialisation is the process of defining a set of subclass of entity type.(top-down)  
+   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/specialasition.png)
+        (2) Generalisation is the inverse process of specialisation
+   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/generalisation.png)  
+   #### constraints on specialisation and generalisation  
+        (1) Disjointness constraints  
+        不相交约束：子类的具体化必须不相交（disjoint）  
+        如果没有这个约束，那么子类的实体可能会重合（overlap）  
+        (2) Completeness constraints  
+        Total:Every entity in the superclass must be a member of at least one subcalss  
+   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/disjointness.png)
+        Partial: an entity may not belong to any of the subclasses.  
+   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/completeness.png)
+   #### summary of notations  
+   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/summary_notation.png)  
        
       
 
