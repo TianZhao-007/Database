@@ -6,7 +6,7 @@
 
 ## 3.Entity-Relationship Model
   ### 3.1 Database design  
-  ![DB deign](https://github.com/TianZhao-007/Database/blob/master/note_picture/database_design.png)
+   ![DB deign](https://github.com/TianZhao-007/Database/blob/master/note_picture/database_design.png)
   #### There are four steps to design database:  
   ###### step 1 : requirements collection and analysis  
      目的： 收集和分析数据需求，以满足商业组织的需要  
@@ -38,7 +38,7 @@
       参与约束描述（participation/cardinality constraint）关系类型  
       （3）**数据操控**  
       没有标准的data manipulation和ER 数据模型相关  
-      ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/compare.png)  
+   ![compare](https://github.com/TianZhao-007/Database/blob/master/note_picture/compare.png)  
    #### ER diagrams
       目的： 描述ER数据模型  
       记号：   
@@ -63,7 +63,17 @@
         superkeys, candidate key, primary key  
         最小数目的superkeys就是candidate key（实体类型）
         对ER模型来说，可能存在多个candidate keys（实体类型）  
-        关系类型的primary key是参与关系类型的实体类型的主键的组合
+        关系类型的primary key是参与到关系的实体类型的主键的组合  
+   #### Constraints on relationships  
+        (*对二元关系类型而言）  
+        **cardinality ratios**: 描述实体可以参与的关系 的最大值  
+   ![cardinality_ratios](https://github.com/TianZhao-007/Database/blob/master/note_picture/participation%20radios.png)          
+        **Participation constraints**: (total,partial)  
+        员工 work-for 公司  
+   ![Participation_constraints](https://github.com/TianZhao-007/Database/blob/master/note_picture/relationship_constraints.png)  
+        Total: 例子，一个员工必须为一个公司工作，但每个公司可能有人可能没人  
+        Partial：例子，一个员工可能工作也可能不工作，每个公司可能有人可能没人  
+   ![limit](https://github.com/TianZhao-007/Database/blob/master/note_picture/participation_limits.png)  
         
    
         
