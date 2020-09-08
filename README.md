@@ -101,22 +101,42 @@
         (2) Subclass can have additional attributes and realationships.  
         (3) This type of relationship between subclass and superclass is often called ISA relationship type.  
    #### specialisation/generalisation(具体化/一般化)  
-        (1) Specialisation is the process of defining a set of subclass of entity type.(top-down)  
-   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/specialasition.png)
+        (1) Specialisation is the process of defining a set of subclass of entity type.(top-down)    
+   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/specialasition.png)  
         (2) Generalisation is the inverse process of specialisation
-   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/generalisation.png)  
+   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/generalisation.png)   
    #### constraints on specialisation and generalisation  
         (1) Disjointness constraints  
         不相交约束：子类的具体化必须不相交（disjoint）  
         如果没有这个约束，那么子类的实体可能会重合（overlap）  
         (2) Completeness constraints  
         Total:Every entity in the superclass must be a member of at least one subcalss  
-   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/disjointness.png)
-        Partial: an entity may not belong to any of the subclasses.  
-   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/completeness.png)
+   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/disjointness.png)    
+        Partial: an entity may not belong to any of the subclasses.   
+   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/completeness.png)  
    #### summary of notations  
    ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/summary_notation.png)  
-       
+   #### From ER to relations  
+   steps: requirements->ER model(conceptual level)->relational database schema(logical level)->relational DBMS(physcial level)  
+   ER模型是主观的，一个scenario下可能有多中ER models.  
+   约束在设计数据库时很有作用，但是：  
+   （1）不是所有约束都可以在ER中描述；  
+   （2）不是所有在ER中的约束都可以被翻译到关系中；  
+   ##### ER to relations algorithms  
+    (1) mapping of regualar entity type  
+    PK: the key attributes of E(entity)  
+    e.g. Department(name,address) with PK:{name}  
+    (2) mapping of weak entity type  
+    PK: the partial key attributes of Ew plus the PK of its identifying entity type  
+    FK: refereces the PK of its identifying entity type  
+    (3) mapping of binary 1:1 relationship types  
+    There are three cases: foreign key approach; merged relation approach; Cross-reference approach
+    (4) mapping of binary 1:N relationship types  
+    (5) mapping of binary M:N relationship types  
+    (6) mapping of multi-valued attributes  
+    (7) mapping of N-ary realtionship types  
+    (8) mapping of superclass/subclass  
+    
       
 
 ## 4.Functional Dependencies
