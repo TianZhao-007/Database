@@ -1,4 +1,4 @@
-# Relational Database notes(Postgre SQL)
+# Relational Database notes
 
 ## 1.Introduction to Database Systems
 
