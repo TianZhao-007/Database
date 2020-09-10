@@ -190,6 +190,7 @@
    
    Q1: 我们的问题就是给定了一个关系R中的**所有函数依赖FD**，怎么去寻找candidate keys?  
    Q2: 给定部分函数依赖，怎么去找到所有的函数依赖？（**隐式函数依赖**）   
+   
 ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/implied_FD.png)   
 
    **等价的函数依赖**
