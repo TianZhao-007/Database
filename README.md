@@ -4,12 +4,8 @@
   * [3.Entity-Relationship Model](#3entity-relationship-model)
     + [3.1 Database design](#31-database-design)
       - [There are four steps to design database:](#there-are-four-steps-to-design-database-)
-          + [step 1 : requirements collection and analysis](#step-1---requirements-collection-and-analysis)
-          + [step 2 : Conceptual design](#step-2---conceptual-design)
-          + [step 3 : Logical design](#step-3---logical-design)
-          + [step 4 : physical design](#step-4---physical-design)
     + [3.2 Entity-Relationship(ER) Model](#32-entity-relationship-er--model)
-      - [通常，ER数据模型主要有三个方面：](#---er------------)
+      - [ER数据模型的三个方面](#---er------------)
       - [ER diagrams](#er-diagrams)
       - [Entity tpyes and Enitity sets](#entity-tpyes-and-enitity-sets)
       - [Relationship types and relationships sets](#relationship-types-and-relationships-sets)
@@ -46,19 +42,19 @@
   ### 3.1 Database design  
    ![DB deign](https://github.com/TianZhao-007/Database/blob/master/note_picture/database_design.png)
   #### There are four steps to design database:  
-  ###### step 1 : requirements collection and analysis  
+  step 1 : requirements collection and analysis  
      目的： 收集和分析数据需求，以满足商业组织的需要  
      包括： 对数据的描述、使用， 数据收集和使用的细节， 数据库将来可能的新需求...  
-  ###### step 2 : Conceptual design  
+ step 2 : Conceptual design  
      目的： 数据概念设计  
      内容： 在高层次抽象出数据； 数据充分的简单，经常用图表表示； 用于和非技术人员交流数据需求  
      （* in this blog, the conceptual design is  based on the entity-relationship model）  
-  ###### step 3 : Logical design  
+ step 3 : Logical design  
       目的： 建立逻辑数据模型（e.g relational or object-oriented）  
       内容： 从概念层到逻辑层， 还可以进一步提炼（e.g. Normalisation:规范（BCNF,3NF,etc））  
       举例： From  ER model to relations with their primary and foreign keys,满足SQL的增删查改等
       （* in this blog, the logical design is  based on the relational model）  
-  ###### step 4 : physical design  
+ step 4 : physical design  
       目的： 把逻辑层次转换成具体的数据管理系统（DBMS）  
       举例： 假设逻辑数据是关系数据模型，在DBMS中建立关系的步骤：  
           选择存储关系的文件； 决定用什么索引来加速访问； 描述完整性约束（integrity constraints）和安全措施
@@ -68,7 +64,7 @@
   ### 3.2 Entity-Relationship(ER) Model
       In 1976, Peter Chen came up with this idea.  
       Later,ER model became the most popular data model used in conceptual database design.  
-   #### 通常，ER数据模型主要有三个方面：  
+   #### ER数据模型的三个方面：  
       （1） 数据结构：   
       在ER模型中，数据被描述成实体（entity）和带属性（attributes）的关系（relationship)  
       （2） 数据完整性：   
