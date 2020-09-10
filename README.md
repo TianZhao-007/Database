@@ -18,7 +18,7 @@
       - [constraints on specialisation and generalisation](#constraints-on-specialisation-and-generalisation)
       - [summary of notations](#summary-of-notations)
       - [From ER to relations](#from-er-to-relations)
-        * [ER to relations algorithms](#er-to-relations-algorithms)
+      - [ER to relations algorithms](#er-to-relations-algorithms)
   * [4.Functional Dependencies](#4functional-dependencies)
     + [Database design quaility](#database-design-quaility)
     + [Issues with design database](#issues-with-design-database)
