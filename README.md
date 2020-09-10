@@ -170,7 +170,8 @@
     
   Trival FD: 平凡函数依赖
   这个概念就是说，如果有X -> Y, 总是满足Y是X的子集，那就是平凡函数依赖；  
-  反正，如果有X -> Y, 总是满足Y不是X的子集，那就是非平凡（non-trival）函数依赖  
+  反正，如果有X -> Y, 总是满足Y不是X的子集，那就是非平凡（non-trival）函数依赖
+  Completely nontrivial FD:完全非平凡依赖，说明 X 并 Y  = 空集
   
       Trivial − If a functional dependency (FD) X → Y holds, where Y is a subset of X, then it is called a trivial FD.   
       Trivial FDs always hold. Non-trivial − If an FD X → Y holds, where Y is not a subset of X, then it is called a non-trivial FD.  
@@ -194,10 +195,11 @@
 ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/implied_FD.jpg)   
 
    **等价的函数依赖**
+   
 ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/equal_FD.png)    
 ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/equal_FD_1.png)    
 
-
+ ### 
 
 
 
