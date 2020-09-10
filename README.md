@@ -83,14 +83,14 @@
    ![limit](https://github.com/TianZhao-007/Database/blob/master/note_picture/participation_limits.png)  
     
    #### weak enitity types   
-        弱关系实体类型(双菱形表示）     
+弱关系实体类型(双菱形表示）     
         Def： Weak entity sets are the sets that do not have a primary key.    
         Its exitence depends on the existence of an identifying entity type（识别关系）  
         It must have one or more attributes,together with the primary key of the identifying entity type   
         so that this weak entity tpye can be distinguished.   
    ![weak_entity](https://github.com/TianZhao-007/Database/blob/master/note_picture/weak_entity.png)  
   ### Enhanced Entity-relationship(EER) model  
-        基本定义：增强型实体关系模型包含ER模型的所有性质  
+  基本定义：增强型实体关系模型包含ER模型的所有性质  
         特点：  
         subclass/superclass  
         specialisation/generalisation  
@@ -108,11 +108,11 @@
    ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/generalisation.png)   
    
    #### constraints on specialisation and generalisation  
-        (1) Disjointness constraints  
+   (1) Disjointness constraints  
         不相交约束：子类的具体化必须不相交（disjoint）  
         如果没有这个约束，那么子类的实体可能会重合（overlap）  
         
-        (2) Completeness constraints  
+   (2) Completeness constraints  
         Total:Every entity in the superclass must be a member of at least one subcalss  
    ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/disjointness.png)    
    
@@ -156,23 +156,45 @@
     (3) update anomalies（更新异常）  
     We should avoid these problems when we design database.  
 ### Functional dependencies  
-   FD就是说，在一个关系内，一些属性的值决定另一些属性的值。
-   举个很简单的例子，关系R{animal，legs} 
+   函数依赖FD就是说，在一个关系内，一些属性的值决定另一些属性的值。
+   举个很简单的例子，关系R{animal，legs}   
    我们说animal这个属性决定legs这个属性。  
    这个性质叫做 animal functionally determines legs.  
-   {animal} -> {legs}, animal 叫做 determinant， legs 叫做 dependent.
+   {animal} -> {legs}, animal 叫做 determinant， legs 叫做 dependent.  
+   （e.g. X -> Y，如果X 确定了，那么Y 一定是同一个值。）
    
     Aim: People want to analysis database design quality in a formal way(FDs).  
+    Def： A FD on R is an expression X -> Y with attributes sets X,Y belongs to R.
     FDs tell us the relationship between and among attributes.  
     Top-down method: Start with a relation schema and FDs and produce smaller relaiton schemas.  
     
+  Trival FD: 平凡函数依赖
+  这个概念就是说，如果有X -> Y, 总是满足Y是X的子集，那就是平凡函数依赖；  
+  反正，如果有X -> Y, 总是满足Y不是X的子集，那就是非平凡（non-trival）函数依赖  
+  
+      Trivial − If a functional dependency (FD) X → Y holds, where Y is a subset of X, then it is called a trivial FD.   
+      Trivial FDs always hold. Non-trivial − If an FD X → Y holds, where Y is not a subset of X, then it is called a non-trivial FD.  
+      
+   ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/FD.png)    
+ ### How to identify FDs in general? （two ways） 
+   (1) 分析数据需求  
+   比如，我们要设计一个关系 Employee = {ID,name,department,...}  
+   其中某个需求是：一个员工名字必须要和他的工号一一对应，因此，我们有{ID} -> {name}  
+   (2) 分析样本数据  
+   就是给定了我们的数据集，让我们来造一个数据库。  
+   
+ ### Finding keys  
+   superkey: 如果一个关系属性的子集可以被这个关系唯一识别；  
+   candidate key: 如果一个superkey，它的真子集都不是superkey；  
+   primary key: 从candidate keys中选定一个作为主键。  
+   
+   Q1: 我们的问题就是给定了一个关系R中的**所有函数依赖FD**，怎么去寻找candidate keys?  
+   Q2: 给定部分函数依赖，怎么去找到所有的函数依赖？（**隐式函数依赖**）   
+![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/implied_FD.png)   
 
-
-
-
-
-
-
+   **等价的函数依赖**
+![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/equal_FD.png)    
+![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/equal_FD_1.png)    
 
 
 
