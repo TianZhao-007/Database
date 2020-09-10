@@ -160,7 +160,8 @@
    约束在设计数据库时很有作用，但是：  
    （1）不是所有约束都可以在ER中描述；  
    （2）不是所有在ER中的约束都可以被翻译到关系中；  
-   ##### ER to relations algorithms  
+  
+  ER to relations algorithms  
     (1) mapping of regualar entity type  
     PK: the key attributes of E(entity)  
     e.g. Department(name,address) with PK:{name}  
