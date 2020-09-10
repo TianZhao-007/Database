@@ -156,6 +156,9 @@
     (3) update anomalies（更新异常）  
     We should avoid these problems when we design database.  
 ### Functional dependencies  
+   WHY FDs?  
+   目的：函数依赖是为了设计出更好的数据库，让每个数据之间约束到位  
+   含义：顾名思义，函数依赖是函数关系，y= f(x)就是说一个x值肯定对应一个y，y可能对应多个x值  
    函数依赖FD就是说，在一个关系内，一些属性的值决定另一些属性的值。
    举个很简单的例子，关系R{animal，legs}   
    我们说animal这个属性决定legs这个属性。  
@@ -199,7 +202,67 @@
 ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/equal_FD.png)    
 ![image](https://github.com/TianZhao-007/Database/blob/master/note_picture/equal_FD_1.png)    
 
- ### 
+ ###  Rules for FD  
+ 几个函数依赖的规则：  
+ （1）splitting rule 分离律  
+ 比如： X，Y -> Z，不存在 X -> Z or Y -> Z;  
+ 但是，如果X -> Y,Z ,那么我们可以说 X -> Y AND X ->Z； 
+ 分离律是针对**右面**而言的  
+ 
+ （2）combining rule 结合律  
+ 比如： 如果X -> Z or Y -> Z，那么X，Y -> Z；  
+ 
+ （3）trivial-denpendency rule 平凡依赖律  
+ 比如： X -> Y, Y是X的子集； 那么 X -> X并Y 以及 X-> X交Y；  
+ 
+ （4） Transitive rule 传递律  
+ 比如： X ->Y ,Y -> Z, 那么有X -> Z;  
+ 
+ （5） reflexive rule 自反律  
+ 比如： XY -> Y  
+ 
+ （6） augmentation rule 增加律  
+ 比如： X->Y, 那么XZ -> YZ  
+ 
+ ### closure of attributes  
+ Given relation,FDs,set of attributes A  
+ Find all B such that A -> B (called closure)  
+ A+ = {A1,A2,...An}+  
+ Start from {A1,A2,...An      }+   
+ repeat until on more change  
+ if A -> B and A is in set, add B to set;  
+ (e.g. A4-> C, add C into the closure set)  
+ 
+ 举个例子： student(ssn, sname, address, hscode, hsname, hscity, GPA, priority)  
+ a. ssn -> sname,address,GPA  
+ b. GPA -> priority  
+ c. hscode -> hsname,hscity  
+ 比如说，我们要求闭包{hscode,ssn}+  
+ （1）结合a用分离律，{hscode,ssn}+ = {hscode,ssn,sname,address,GPA}  
+ （2）结合b，{hscode,ssn}+ = {hscode,ssn，sname,address,GPA}  
+ （3）结合c, {hscode,ssn}+ = {hscode,ssn，sname,address,GPA,hsname,hscity}  
+ 我们发现，{hscode,ssn}+能够推出所有的attributes，我们说他是一个key  
+ 
+ 闭包理论可以求keys；  
+ Is set A a key for R?  
+ compute A+, if A+ = all attributes,then A is a key  
+ 就是计算A的闭包，能推出所有属性，他就是一个key
+ Given a set of FDs,how can we find all keys?  
+ Consider every subset of attributes,figure out whether they can derive all attributes  
+ 
+ specifying FDs for a relation  
+ S1 and S2 sets of FDs  
+ S2 **follow form** S1 if every relation instance satisfying S1 also satirsfies S2  
+ 就是说S2如果follow from S1的话，那么每一个满足S1的关系实例，也同时满足S2.  
+ 举个例子，S2：{ssn -> priority}; S1 -> {ssn -> GPA, GPA ->priority}  
+ 
+ How to test A-> B follow from S ?  
+ (1) A+ based on S, check if B is in set.  
+ (2) Armstrong rules  
+  
+  ### minimal cover/set   
+  A minimal cover of a set of FDs F is a minimal set of functional dependencies Fmin that is equivalent to F.   
+  There can be many such minimal covers for a set of functional dependencies F. 
 
 
 
