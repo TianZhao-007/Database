@@ -145,6 +145,28 @@
 
 ## 4.Functional Dependencies
 
+### Database design quaility  
+    (1) completeness 完整性: Does all information has been captured?   
+    (2) redundancy freeness 冗余度:Has inforamtion doubled?(if possible)  
+    (3) consistent understanding 意义一致性:Does the meaning is consistenet? Does the meaning of NULL is clear?  
+    (4) performance 性能:Given tasks,how about its performance?  
+### Issues with design database  
+    (1) data inconsistency (e.g.the same people have two DoBs)  
+    (2) data redundancy(e.g. one person occurs two times)  
+    (3) update anomalies（更新异常）  
+    We should avoid these problems when we design database.  
+### Functional dependencies  
+   FD就是说，在一个关系内，一些属性的值决定另一些属性的值。
+   举个很简单的例子，关系R{animal，legs} 
+   我们说animal这个属性决定legs这个属性。  
+   这个性质叫做 animal functionally determines legs.  
+   {animal} -> {legs}, animal 叫做 determinant， legs 叫做 dependent.
+   
+    Aim: People want to analysis database design quality in a formal way(FDs).  
+    FDs tell us the relationship between and among attributes.  
+    Top-down method: Start with a relation schema and FDs and produce smaller relaiton schemas.  
+    
+
 
 
 
