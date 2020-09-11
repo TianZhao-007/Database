@@ -298,6 +298,7 @@
   ### minimal cover/set   
   A minimal cover of a set of FDs F is a minimal set of functional dependencies Fmin that is equivalent to F.   
   There can be many such minimal covers for a set of functional dependencies F. 
+  
 
 
 
