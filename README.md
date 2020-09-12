@@ -295,30 +295,49 @@
  (1) A+ based on S, check if B is in set.  
  (2) Armstrong rules  
   
-  ### minimal cover/set   
+  ### minimal cover/set最小依赖集  
   A minimal cover of a set of FDs F is a minimal set of functional dependencies Fmin that is equivalent to F.   
-  There can be many such minimal covers for a set of functional dependencies F. 
+  There can be many such minimal covers for a set of functional dependencies F.   
+  （1）将F中的所有函数依赖的右边化为单一属性；  
+  （2）去掉F中的所有函数依赖左边的冗余属性；  
+  （3）去掉F中所有冗余的函数依赖。  
+  If XB -> A, and X -> A is already existing, the B is unecessary.  
   
-
-
 
 ## 5.Normalisation
    Normal forms: 1NF -> 2NF -> 3NF -> BCNF (test criteria: weak -> strong)  
    Def: decomposing a relation into smaller relations in certain normal form  
    规范化就是把关系分解成更小的特定关系  
-   ### Boyce-Codd Normal form(BCNF)  
+   ### Boyce-Codd Normal form(BCNF/3.5NF)  
    Def: a relation schema R is in BCNF if whenever a non-trivial FD X-> A hols in R, then X is a superkey.  
-   一个关系R是BCNF的时候，只要有非平凡函数依赖（X-> A）存在,那么X一定是superkey.  
+   一个关系R是BCNF的时候，若有非平凡函数依赖（X-> A）存在,那么X一定是superkey.  
    当关系R是BCNF的时候，所有的数据冗余都被移除.  
    Do not represent the same fact twice(within a relation).This doesn't mean a good design.  
    
-   Algorithm for BCNF-decomposition:  
+   Algorithm for BCNF-decomposition:分解成更小的关系   
+   Determine FDs that violate BCNF  
+   For every violating FD X->A, decompose relation into R-X and XA.  
+   Repeat until all relations stisify BCNF.    
+   例子A ： R（ABCD），ABC->D, D->A, CK: ABC
+   because D-A violates BCNF, R1(AD) R2(R-A = ABC)  
+   (1) R1(AD), CK: D  
+   (2) R2(ABC), no FDs  
+   Not dependency preserving  
    
-
-
-
-
-
+   例子B： R(ABCD) CK:A,  FDs = {A -> B, A -> C, BC->D}  
+   We find that BC -> D violates BCNF  
+   therefore, R1(BCD) R2(R-D = ABC)  
+   (1) R1(BCD) CK: BC  
+   (2) R2(ABC)  CK: A  
+   Decomposition is completed!  
+   
+  ### 3NF Decomposition   
+   Find all cnadidate keys  
+   Find THE MINIMAL set  
+   create a relation for every FD in the minimal set  
+   create a relation for every candidate key not already included in the relations from the previous step  
+   
+  
 
 
 
