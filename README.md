@@ -338,6 +338,7 @@
    create a relation for every FD in the minimal set  
    create a relation for every candidate key not already included in the relations from the previous step  
    
+   
   
 
 
