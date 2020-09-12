@@ -303,3 +303,24 @@
 
 
 ## 5.Normalisation
+   Normal forms: 1NF -> 2NF -> 3NF -> BCNF (test criteria: weak -> strong)  
+   Def: decomposing a relation into smaller relations in certain normal form  
+   规范化就是把关系分解成更小的特定关系  
+   ### Boyce-Codd Normal form(BCNF)  
+   Def: a relation schema R is in BCNF if whenever a non-trivial FD X-> A hols in R, then X is a superkey.  
+   一个关系R是BCNF的时候，只要有非平凡函数依赖（X-> A）存在,那么X一定是superkey.  
+   当关系R是BCNF的时候，所有的数据冗余都被移除.  
+   Do not represent the same fact twice(within a relation).This doesn't mean a good design.  
+   
+   Algorithm for BCNF-decomposition:  
+   
+
+
+
+
+
+
+
+
+
+
