@@ -5,20 +5,19 @@
     + [3.1 Database design](#31-database-design)
       - [There are four steps to design database:](#there-are-four-steps-to-design-database-)
     + [3.2 Entity-Relationship(ER) Model](#32-entity-relationship-er--model)
-      - [ER数据模型的三个方面](#---er------------)
+      - [ER数据模型的三个方面：](#er----------)
       - [ER diagrams](#er-diagrams)
       - [Entity tpyes and Enitity sets](#entity-tpyes-and-enitity-sets)
       - [Relationship types and relationships sets](#relationship-types-and-relationships-sets)
       - [ER模型中的键（keys） ：类比关系数据库的键](#er------keys------------)
       - [Constraints on relationships](#constraints-on-relationships)
       - [weak enitity types](#weak-enitity-types)
-    + [Enhanced Entity-relationship(EER) model](#enhanced-entity-relationship-eer--model)
+    + [3.3 Enhanced Entity-relationship(EER) model](#33-enhanced-entity-relationship-eer--model)
       - [subclass/superclass（子类/父类）](#subclass-superclass-------)
       - [specialisation/generalisation(具体化/一般化)](#specialisation-generalisation---------)
       - [constraints on specialisation and generalisation](#constraints-on-specialisation-and-generalisation)
       - [summary of notations](#summary-of-notations)
       - [From ER to relations](#from-er-to-relations)
-      - [ER to relations algorithms](#er-to-relations-algorithms)
   * [4.Functional Dependencies](#4functional-dependencies)
     + [Database design quaility](#database-design-quaility)
     + [Issues with design database](#issues-with-design-database)
@@ -27,8 +26,10 @@
     + [Finding keys](#finding-keys)
     + [Rules for FD](#rules-for-fd)
     + [closure of attributes](#closure-of-attributes)
-    + [minimal cover/set](#minimal-cover-set)
+    + [minimal cover/set最小依赖集](#minimal-cover-set-----)
   * [5.Normalisation](#5normalisation)
+    + [Boyce-Codd Normal form(BCNF/3.5NF)](#boyce-codd-normal-form-bcnf-35nf-)
+    + [3NF Decomposition](#3nf-decomposition)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -123,7 +124,7 @@
         It must have one or more attributes,together with the primary key of the identifying entity type   
         so that this weak entity tpye can be distinguished.   
    ![weak_entity](https://github.com/TianZhao-007/Database/blob/master/note_picture/weak_entity.png)  
-  ### Enhanced Entity-relationship(EER) model  
+  ### 3.3 Enhanced Entity-relationship(EER) model  
   基本定义：增强型实体关系模型包含ER模型的所有性质  
         特点：  
         subclass/superclass  
