@@ -35,9 +35,11 @@
 
 # Relational Database notes
 
-## 1.Introduction to Database Systems
+## 1.Introduction to Database Systems  
+  Basic concepts.
 
-## 2.Relational Data Model and SQL
+## 2.Relational Data Model and SQL  
+  How to use SQL to CRUD?
 
 ## 3.Entity-Relationship Model
   ### 3.1 Database design  
