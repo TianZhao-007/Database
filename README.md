@@ -342,7 +342,42 @@
    
    
   
-##  Relational Algebra
+##  6.Relational Algebra
+   Aim: Relation algebra(RA) is a procedural query language defined in relation model.  
+   RA is used for the internal representation and processing of sql queries in relational DBMS,   
+    which is a basis of query optimisation techiques.  
+   Therefore, to understand how SQL queries are processed and how they can be optimised,   
+   we need to understand relational algebra first.  
+   
+   components: relations + relational operators  
+   ### 6.1 relational operators  
+   selection: choose certain tuples(rows) -> use /sigma + /phi to show  
+   projection: choose certain attributes(columns) -> use /pi -> also /pi avoids duplicates  
+   Renaming: change the names of attributes or relation -> /rho  
+   Union,intersection, difference: set operations on two relations(having the same relational schema)  
+   Certersian set and join: combine tuples from multiple relations together  
+   -> certersian set may contribute to nonsense tuples, therefore we use join  
+   -> join(join<with filter> / natural join)   
+ 
+   ### 6.2 RA queries  
+   priorities: high to low{selection projection rename}->{certersian set and join}->{intersection}  
+   ->{union difference}  
+   query: input(two relations) -> output(one relatin)  
+   *different from SQL,RA considers relations as sets,NO duplicate tuples in RA  
+   
+   ### RA versus SQL  
+   SELECT DISTINCT * FROM R WHERE /phi; = slection(RA)  
+   SELECT DISTINCT A1,A2,... An FROM R; = projection(RA)  
+   SELECT AXXX AS A; = renaming(RA)  
+   SELECT * FROM R1 UNION SELECT * FROM R2; = union(RA)  
+   SELECT * FROM R1 INTERSECT SELECT * FROM R2; = intersection(RA)   
+   SELECT * FROM R1 EXCEPT(WEHRE NOT EXIST) SELECT * FROM R2; = difference(RA)  
+   SELECT * FROM R1,R2 = Certesian product  
+   SELECT DISTINCT * FROM R1 INNER JOIN R2 ON /phi = join（RA)  
+   SELECT DISTINCT * FROM R1 NATURAL JOIN R2 = natural join(RA)  
+   ![image](https://miro.medium.com/max/966/0*Mu_d-mJMmaVX-j0P)  
+ 
+   
    
 
 
