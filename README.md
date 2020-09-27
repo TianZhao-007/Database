@@ -30,8 +30,13 @@
   * [5.Normalisation](#5normalisation)
     + [Boyce-Codd Normal form(BCNF/3.5NF)](#boyce-codd-normal-form-bcnf-35nf-)
     + [3NF Decomposition](#3nf-decomposition)
+  * [6.Relational Algebra](#6relational-algebra)
+    + [6.1 relational operators](#61-relational-operators)
+    + [6.2 RA queries](#62-ra-queries)
+    + [RA versus SQL](#ra-versus-sql)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 # Relational Database notes
 
