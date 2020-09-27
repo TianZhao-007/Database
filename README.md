@@ -376,7 +376,10 @@
    SELECT DISTINCT * FROM R1 INNER JOIN R2 ON /phi = join（RA)  
    SELECT DISTINCT * FROM R1 NATURAL JOIN R2 = natural join(RA)  
    ![image](https://miro.medium.com/max/966/0*Mu_d-mJMmaVX-j0P)  
- 
+   
+   One significant difference between **INNER JOIN and NATURAL JOIN** is the number of columns returned.  
+   Natural join avoid the repeated columns.
+   <https://stackoverflow.com/questions/8696383/difference-between-natural-join-and-inner-join>  
    
    
 
