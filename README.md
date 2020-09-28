@@ -384,7 +384,63 @@
    
    One significant difference between **INNER JOIN and NATURAL JOIN** is the number of columns returned.  
    Natural join avoid the repeated columns.
-   <https://stackoverflow.com/questions/8696383/difference-between-natural-join-and-inner-join>  
+   <https://stackoverflow.com/questions/8696383/difference-between-natural-join-and-inner-join>   
+   
+   ## 7. Query Processing and Optimization  
+   ### 7.1 Query processing  
+   Example:  
+   a. SELECT XXX FROM XXX WHERE XXX... (high level language:SQL)  
+   || pasrser and translator解析器和翻译器  
+   b. pai(xxx)(sigma(age<21) xxx)... (low level language:Relational algebra)  
+   || optimiser 优化器 <-statistics about DB data  
+   c. Execution plan...(query tree)  
+   || Evaluation engine -> code implementing relational operators -> DATABASE  
+   d. Query results  
+   
+   Def concepts:  
+   1. parser解释器：检查查询语法  
+   validation of table names,attributes,data types,access permisson  
+   the query is executable or an error message is generated  
+   2. translator翻译器：把query语句翻译成RA表达形式  
+   （not necessarily equivalnet due to duplicates）  
+   3. query otimiser查询优化器  
+   Transform into the best possible exection plan  
+    (For a single query, there may have different possible RA expressions.)  
+    Specify the implementation of each operator in the execution plan.  
+    (There are different possible implementations for a relational algebra operator!)  
+    sql语句只指定访问的数据，不是如何访问数据。对于一条SQL语句可能有多种执行方案。  
+    查询优化器的使命就是找到一个有效率的execution plan.  
+    ->enumerate(枚举） alternative plans  
+    ->choose the one with the least estimated cost  
+    查询优化是关系DBMS中最重要的任务之一。  
+    优秀的DBMS必须有一个好的parser。  
+    4. Query trees查询树  
+    Each RA expression can be represented as a query tree.  
+    leaf node: input relations  
+    internal node: intermediate result  
+    root node: resulting relation  
+    对于每一个查询树，计算自底向上（bottom-Up）  
+    -> child nodes must be executed before their parent nodes  
+    -> but there can exist multiple mehtods of executing sibling（兄弟）nodes（sequentially/parallel）  
+    5. Execution plan执行方案  
+    Execution plan consists of an **query tree** with **additional annotation** at each node indicating.  
+    (1) the *access* method to use for each table.  
+    (2) the *implementation* method for each RA operators(i.e. on-the-fly,nested loop,file scan...)  
+    
+   Steps details:  
+   Query parser and translator:  
+   1.check the syntax of SQL queries  
+   2.verify that the relations do exist  
+   3.transform into relational algerbra expressions  
+   Query optimiser:  
+   1.transform into the best possible excution plan  
+   2.specify the implementation of each operator in the excution plan  
+   Evaluation engine:  
+   1.Evaluate the query execution plan  
+   2.Return the result to the user  
+   
+   
+   
    
    
 
