@@ -439,6 +439,20 @@
    1.Evaluate the query execution plan  
    2.Return the result to the user  
    
+   ### 7.2 Query optimisation  
+   Three approaches to do optimisation  
+   - semantic（语义） query optimisation  
+   *Integrity constraints* in the relational model may not only be utilized to enforce consistency of database,  
+   But may also optimise user queries.  
+   Examples:  
+   ->SELECT DISTINCT ssn FROM Employee;(ssn is PK)  
+   ->we can avoid extra costs for duplicate elimination if the existing constraints tells us  
+   that tuples in the result will be unique.  
+   
+   - rule-based query optimisation  
+   - cost-based query optimisation  
+   
+   
    
    
    
