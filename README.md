@@ -442,15 +442,20 @@
    ### 7.2 Query optimisation  
    Three approaches to do optimisation  
    - semantic（语义） query optimisation  
-   *Integrity constraints* in the relational model may not only be utilized to enforce consistency of database,  
+   *Integrity constraints*（e.g. key constraints,domain constraints） in the relational model may not only be utilized to enforce consistency of database,  
    But may also optimise user queries.  
    Examples:  
    ->SELECT DISTINCT ssn FROM Employee;(ssn is PK)  
    ->we can avoid extra costs for duplicate elimination if the existing constraints tells us  
    that tuples in the result will be unique.  
    
-   - rule-based query optimisation  
-   - cost-based query optimisation  
+   - rule-based query optimisation基于规则的查询优化  
+   idea: apply the most restrictive operation before other operations,reducing the size of intermediate results.  
+   e.g. push-down selection; push-down projection; re-ordering joins
+   * ensure the equivalance of RA experession  
+   
+   - cost-based query optimisation基于代价的查询优化  
+   limit the number of execution strategies
    
    
    
