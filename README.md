@@ -262,7 +262,8 @@
  比如： X ->Y ,Y -> Z, 那么有X -> Z;  
  
  （5） reflexive rule 自反律  
- 比如： XY -> Y  
+ In the reflexive rule, if Y is a subset of X, then X determines Y.  
+ If X ⊇ Y then X  → Y    
  
  （6） augmentation rule 增加律  
  比如： X->Y, 那么XZ -> YZ  
