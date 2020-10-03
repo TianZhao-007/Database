@@ -332,6 +332,7 @@
    一个关系R是BCNF的时候，若有非平凡函数依赖（X-> A）存在,那么X一定是superkey.  
    当关系R是BCNF的时候，所有的数据冗余都被移除.  
    Do not represent the same fact twice(within a relation).This doesn't mean a good design.  
+   <https://blog.csdn.net/qq_43179428/article/details/105596526?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.edu_weight&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.edu_weight>
    
    Algorithm for BCNF-decomposition:分解成更小的关系   
    Determine FDs that violate BCNF  
