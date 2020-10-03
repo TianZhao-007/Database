@@ -294,6 +294,15 @@
  Given a set of FDs,how can we find all keys?  
  Consider every subset of attributes,figure out whether they can derive all attributes  
  
+ some tricks(技巧）：  
+ (FD: X -> Y, determinant -> dependent)  
+ * 1. If an attritube never appears in the dependent of any FD,  
+ Then it must be part of Key.  
+ * 2. If an attribute never appears in the determinant of any FD,  
+ then it must not be part of Key.  
+ * 3. If a proper subset of X is a key, then X must not be a key.  
+ 
+ 
  specifying FDs for a relation  
  S1 and S2 sets of FDs  
  S2 **follow form** S1 if every relation instance satisfying S1 also satirsfies S2  
