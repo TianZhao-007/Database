@@ -316,10 +316,11 @@
   ### minimal cover/set最小依赖集  
   A minimal cover of a set of FDs F is a minimal set of functional dependencies Fmin that is equivalent to F.   
   There can be many such minimal covers for a set of functional dependencies F.   
-  （1）将F中的所有函数依赖的右边化为单一属性；  
-  （2）去掉F中的所有函数依赖左边的冗余属性；  
-  （3）去掉F中所有冗余的函数依赖。  
+  （1）将F中的所有函数依赖的右边化为单一属性；RHS reduction  
+  （2）去掉F中的所有函数依赖左边的冗余属性；LHS reduction  
+  （3）去掉F中所有冗余的函数依赖。Redundant FDs  
   If XB -> A, and X -> A is already existing, the B is unecessary.  
+  参考方法： <https://www.cnblogs.com/xiaolu266/p/8041073.html>  
   
 
 ## 5.Normalisation
