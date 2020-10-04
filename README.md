@@ -468,7 +468,41 @@
    * ensure the equivalance of RA experession  
    
    - cost-based query optimisation基于代价的查询优化  
-   limit the number of execution strategies
+   limit the number of execution strategies  
+   
+   ## 8. Database security  
+   Treats to database:  
+   a) loss of confidentiality:a student is not allowed to view grades of other students  
+   b) loss of integrity:students are allowed to see their grades, yet not allowed(obviously) to modify them  
+   c) loss of avaliability:a lecturer is allowed to change grades of students.  
+   
+   ### Access control
+   - Discretionary access control:自主访问控制  
+   (view,Recursive Revocation,Grant revoke)  
+   > GRANT: give priviledge to users  
+   GRANT privileges ON object TO users [WITH GRANT OPTION]  
+   > REVOKE: take away priviledge from uers  
+   REVOKE [GRANT OPTION FOR] privileges ON object FROM users  
+   
+   - Mandatory access control:强制访问控制  
+   Restrict access to objects based on thesensitivity of the information contained  
+   in the objects and the formalauthorizationof subjects to accessinformation of such sensitivity.  
+   
+   - Role-based access control:基于角色的访问控制  
+   Role-Based Access Control (RBAC)1Access rights are grouped byroles,  
+   and the use of resources is restricted toindividuals assigned to specific roles  
+   
+   ### SQL injection(SQL注入)  
+   InSQL injection attacks, hackers inject a string input through the Webapplication  
+   which changes the SQL statement to their advantages.  
+   
+   ### Projection techniques  
+   a) Parameterized queries  
+   b) Input validation  
+   learn more: <https://www.w3schools.com/sql/sql_injection.asp>  
+   
+   
+  
    
    
    
