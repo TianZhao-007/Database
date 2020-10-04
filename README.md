@@ -44,7 +44,8 @@
   Basic concepts.
 
 ## 2.Relational Data Model and SQL  
-  How to use SQL to CRUD?
+  How to use SQL to CRUD?  
+  For practice purpose,  I use sqlzoo.com.
 
 ## 3.Entity-Relationship Model
   ### 3.1 Database design  
