@@ -376,13 +376,17 @@
    
    components: relations + relational operators  
    ### 6.1 relational operators  
-   selection: choose certain tuples(rows) -> use /sigma + /phi to show  
-   projection: choose certain attributes(columns) -> use /pi -> also /pi avoids duplicates  
-   Renaming: change the names of attributes or relation -> /rho  
-   Union,intersection, difference: set operations on two relations(having the same relational schema)  
-   Certersian set and join: combine tuples from multiple relations together  
+   - selection: choose certain **tuples(rows)** -> use /sigma + /phi to show  
+   - projection: choose certain **attributes(columns)** -> use /pi -> also /pi avoids duplicates  
+   - Renaming: change the names of attributes or relation -> /rho  
+   -> To unify schemas for set operators/ self-join  
+   - natural join:  
+   a) enforce equality on all attributes with same name  
+   b) eliminate one copy of duplicate attributes  
+   -> join: join two relations with conditions    
+   - Union,intersection, difference: set operations on two relations(**having the same relational schema**)  
+   - Certersian set and join: combine tuples from multiple relations together  
    -> certersian set may contribute to nonsense tuples, therefore we use join  
-   -> join(join<with filter> / natural join)   
  
    ### 6.2 RA queries  
    priorities: high to low{selection projection rename}->{certersian set and join}->{intersection}  
