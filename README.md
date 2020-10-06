@@ -34,6 +34,13 @@
     + [6.1 relational operators](#61-relational-operators)
     + [6.2 RA queries](#62-ra-queries)
     + [RA versus SQL](#ra-versus-sql)
+  * [7. Query Processing and Optimization](#7-query-processing-and-optimization)
+    + [7.1 Query processing](#71-query-processing)
+    + [7.2 Query optimisation](#72-query-optimisation)
+  * [8. Database security](#8-database-security)
+    + [Access control](#access-control)
+    + [SQL injection(SQL注入)](#sql-injection-sql---)
+    + [Projection techniques](#projection-techniques)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -369,13 +376,17 @@
    
    components: relations + relational operators  
    ### 6.1 relational operators  
-   selection: choose certain tuples(rows) -> use /sigma + /phi to show  
-   projection: choose certain attributes(columns) -> use /pi -> also /pi avoids duplicates  
-   Renaming: change the names of attributes or relation -> /rho  
-   Union,intersection, difference: set operations on two relations(having the same relational schema)  
-   Certersian set and join: combine tuples from multiple relations together  
+   - selection: choose certain **tuples(rows)** -> use /sigma + /phi to show  
+   - projection: choose certain **attributes(columns)** -> use /pi -> also /pi avoids duplicates  
+   - Renaming: change the names of attributes or relation -> /rho  
+   -> To unify schemas for set operators/ self-join  
+   - natural join:  
+   a) enforce equality on all attributes with same name  
+   b) eliminate one copy of duplicate attributes  
+   -> join: join two relations with conditions    
+   - Union,intersection, difference: set operations on two relations(**having the same relational schema**)  
+   - Certersian set and join: combine tuples from multiple relations together  
    -> certersian set may contribute to nonsense tuples, therefore we use join  
-   -> join(join<with filter> / natural join)   
  
    ### 6.2 RA queries  
    priorities: high to low{selection projection rename}->{certersian set and join}->{intersection}  
@@ -468,7 +479,41 @@
    * ensure the equivalance of RA experession  
    
    - cost-based query optimisation基于代价的查询优化  
-   limit the number of execution strategies
+   limit the number of execution strategies  
+   
+   ## 8. Database security  
+   Treats to database:  
+   a) loss of confidentiality:a student is not allowed to view grades of other students  
+   b) loss of integrity:students are allowed to see their grades, yet not allowed(obviously) to modify them  
+   c) loss of avaliability:a lecturer is allowed to change grades of students.  
+   
+   ### Access control
+   - Discretionary access control:自主访问控制  
+   (view,Recursive Revocation,Grant revoke)  
+   > GRANT: give priviledge to users  
+   GRANT privileges ON object TO users [WITH GRANT OPTION]  
+   > REVOKE: take away priviledge from uers  
+   REVOKE [GRANT OPTION FOR] privileges ON object FROM users  
+   
+   - Mandatory access control:强制访问控制  
+   Restrict access to objects based on thesensitivity of the information contained  
+   in the objects and the formalauthorizationof subjects to accessinformation of such sensitivity.  
+   
+   - Role-based access control:基于角色的访问控制  
+   Role-Based Access Control (RBAC)1Access rights are grouped byroles,  
+   and the use of resources is restricted toindividuals assigned to specific roles  
+   
+   ### SQL injection(SQL注入)  
+   InSQL injection attacks, hackers inject a string input through the Webapplication  
+   which changes the SQL statement to their advantages.  
+   
+   ### Projection techniques  
+   a) Parameterized queries  
+   b) Input validation  
+   learn more: <https://www.w3schools.com/sql/sql_injection.asp>  
+   
+   
+  
    
    
    
