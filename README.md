@@ -462,6 +462,7 @@
    Evaluation engine:  
    1.Evaluate the query execution plan  
    2.Return the result to the user  
+   Learn more sql optimization here:<https://www.geeksforgeeks.org/query-optimization-in-relational-algebra/>  
    
    ### 7.2 Query optimisation  
    Three approaches to do optimisation  
