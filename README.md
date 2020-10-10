@@ -48,7 +48,7 @@
 # Relational Database notes
 
 ## 1.Introduction to Database Systems  
-  Basic concepts.
+  Basic concepts.  
 
 ## 2.Relational Data Model and SQL  
   How to use SQL to CRUD?  
