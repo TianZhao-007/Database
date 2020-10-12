@@ -88,7 +88,7 @@
       参与约束描述（participation/cardinality constraint）关系类型  
       （3）数据操控  
       没有标准的data manipulation和ER 数据模型相关  
-   ![compare](https://github.com/TianZhao-007/Database/blob/master/note_picture/compare.jpg)  
+   ![compare](https://github.com/TianZhao-007/Database/blob/master/note_picture/compare.jpg)   
    #### ER diagrams
       目的： 描述ER数据模型  
       记号：   
