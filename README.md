@@ -511,7 +511,63 @@
    ### Projection techniques  
    a) Parameterized queries  
    b) Input validation  
-   learn more: <https://www.w3schools.com/sql/sql_injection.asp>  
+   learn more: <https://www.w3schools.com/sql/sql_injection.asp>   
+   
+   
+   ## 8.Database transactions  
+   ### 8.1 introduction to database transactions  
+   Def: Database applications often access a databaseby transactions rather than individual operations.  
+   Situations:  
+   - multiple users may modify and share data at the same time  
+   - transaction, system, and media failures may happen from time to time  
+   Representation:  
+   From a high level perspective: **INSERT SELECT UPDATE DELETE BEGIN COMMIT ABORT**  
+   At internal process level: **read write begin commit abort**  
+   - read(X): load object X into main memory  
+   - wirte(X): modifies in-memory copy of objectX (and writes it to-disklater on)  
+   - begin: marks the beginning of a transaction  
+   - commit: signals a successful end of the transaction - all changes cansafely be applied to the database permanently  
+   - abort: signals the transaction has ended unsuccessfully - undo alloperations of the transaction  
+   
+   ### 8.2 ACID Properties  
+   **Atomicity**:  
+   The execution of each transaction is atomic, i.e.,either all operations are completed or not done at all.  
+   Only two possibilities: *ALL*(all the operations are operated) *NONE*(none of operations are executed)  
+   
+   **Consistency**: The states of a database are consistent (w.r.t. defined business rules)before and after each transaction.  
+   Aim: preserve theconsistency of the database.  
+   
+   **Isolation**: Execution results of each transaction should not be affected by other concurrent executing transaction.  
+   Isolationrequires that transactions areisolated from one another.  
+   
+   **Durablity**: Once a transction has been successfully completed, its effect should persist in the database.  
+   Durabilityrequires that once the transaction is successfully completed, itschanges to the databasemust be persistent despite failures.  
+   The decision is irrevocable: once committed, the transaction cannot revertto abort.Changes are durable.  
+   
+   ### 8.3 Concurrent Transactions  
+   Aim: Executing transactions concurrently willimprove database performance  
+   - increase throughput:average number of completed transactions  
+   - reduce latency: average time to complete a transaction  
+   But the DBMS has to guarantee that the interleaving of transactions does not lead to inconsistencies  
+   i.e.,**concurrency control**.  
+   
+   #### Concurrency control  
+   Aim: the concurrency control is designed to deal with these problems:  
+   - the lost update problem  
+   (write-write conflicts) caused by overwirting  
+   
+   - The dirty read problem  
+   (write-read conflicts)  
+   T2 could read a database object A, modified by T1 which hasn't committed. This is a dirty read.  
+   
+   - The Unrepeatable Read Problem  
+   - The Phantom Read Problem  
+   Read more here:<https://stackoverflow.com/questions/11043712/what-is-the-difference-between-non-repeatable-read-and-phantom-read>  
+
+
+   
+
+   
    
    
   
