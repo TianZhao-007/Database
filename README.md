@@ -514,8 +514,8 @@
    learn more: <https://www.w3schools.com/sql/sql_injection.asp>   
    
    
-   ## 8.Database transactions  
-   ### 8.1 introduction to database transactions  
+   ## 9.Database transactions  
+   ### 9.1 introduction to database transactions  
    Def: Database applications often access a databaseby transactions rather than individual operations.  
    Situations:  
    - multiple users may modify and share data at the same time  
@@ -529,7 +529,7 @@
    - commit: signals a successful end of the transaction - all changes cansafely be applied to the database permanently  
    - abort: signals the transaction has ended unsuccessfully - undo alloperations of the transaction  
    
-   ### 8.2 ACID Properties  
+   ### 9.2 ACID Properties  
    **Atomicity**:  
    The execution of each transaction is atomic, i.e.,either all operations are completed or not done at all.  
    Only two possibilities: *ALL*(all the operations are operated) *NONE*(none of operations are executed)  
@@ -544,7 +544,7 @@
    Durabilityrequires that once the transaction is successfully completed, itschanges to the databasemust be persistent despite failures.  
    The decision is irrevocable: once committed, the transaction cannot revertto abort.Changes are durable.  
    
-   ### 8.3 Concurrent Transactions  
+   ### 9.3 Concurrent Transactions  
    Aim: Executing transactions concurrently willimprove database performance  
    - increase throughput:average number of completed transactions  
    - reduce latency: average time to complete a transaction  
