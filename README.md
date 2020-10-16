@@ -570,6 +570,9 @@
    Read more here:<https://stackoverflow.com/questions/11043712/what-is-the-difference-between-non-repeatable-read-and-phantom-read>  
 
 
+   ## 10.NoSQL database  
+   ### Introduction to NoSQL database  
+   A borad class of non-relational databases that does not use SQL as their query language.  
    
 
    
