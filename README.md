@@ -571,8 +571,44 @@
 
 
    ## 10.NoSQL database  
-   ### Introduction to NoSQL database  
+   ### 10.1 Introduction to NoSQL database  
    A borad class of non-relational databases that does not use SQL as their query language.  
+   (Sometimes, relational database is not the best soultion)  
+   - Flexibility of schemas  
+   a. Relational modeling is driven by the structure of avaliable data.  
+   b. Also, it's not good at managing hierarchical or graph-like data.  
+   c. relational databases require pre-defined schemas but NoSQL databases have no fixed schemas.  
+   NoSQL modeling is driven by application-specific operation patterns.  
+   
+   - Scalability  
+   a. Many NoSQL databases are driven by **the need to scale**.  
+   b. **Shared-nothing(SN) vs  Shared-everything(SE)**: whether to share disk and memory between nodes.  
+   c. **Scale up(vertically) vs scale out(horizontally)**  
+   sacle up: add resources to a single node in the system(i.e. CPU or memory)  
+   scale out: add more nodes to a system(i.e. web servers)  
+   
+   -Performance  
+   Relational database: implementation techniques are abstracted away from the user.  
+   NoSQL database promotes exposing the implementation techniques to the programmer.  
+   Query performace is often one of the advantages of NoSQL databases when handling complex-valued data(don't need join).  
+   
+   -Costs  
+   Many NoSQL databases are open source, while licensing costs of commercial RDBMSs can be expensive.  
+   
+   ### 10.2 CAP Theorem  
+   a. **Consistency**:All users see the same data at the same time.  
+   b. **Avalibility**:All users can read and write data.  
+   c. **Pratition tolerance**:System works well with network partitions.  
+   For distributed system, only two of the properties can been statisfied.  
+   AP: Dynamo, Cassandra...  
+   CP: BigTable, MongoDB,Redis...  
+   CA: RDBMs  
+   
+   ### 10.3 ACID vs BASE  
+   NoSQL often uses a model that is weaker that ACID,called BASE.  
+   - Basically avaliable  
+   - Soft state  
+   - Eventual consistency  
    
    
    
