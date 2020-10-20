@@ -610,6 +610,20 @@
    - Soft state  
    - Eventual consistency  
    
+   ### Key-value data stores  
+   Inspired by Amazon’s Dynamo (2007)  
+   A big, distributed, fault-tolerant, persistent hash table.  
+   Highly scalable: There are two ways for scaling.  
+   Partitioning: data is partitioned so that each database hasa subset of the datastored on local disks.  
+   Replication: data is copied so that more than one database has the same datastored on local disks  
+   Concurrency is only applicable on a single key, and concurrency conflict isthus easy to handle.  
+   If you need complex operations on values, you should look at other solutions, such as document-oriented data stores.  
+   
+   ### Column-oriented Data Stores  
+   Inspired by Google’s Bigtable.  
+   Uses ashared-nothing architectureto provide scalability over massivedata sets.  
+   
+
    
    
 
